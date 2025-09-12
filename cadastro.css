@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Faixas laterais Corinthians */
+.faixa-esquerda, .faixa-direita {
+    position: fixed;
+    top: 0;
+    width: 50px; 
+    height: 100%;
+    background: linear-gradient(to bottom, black 50%, white 50%);
+    z-index: 1;
+}
+.faixa-esquerda { left: 0; }
+.faixa-direita { right: 0; }
+
+/* Container central */
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Logo do Corinthians */
+.logo {
+    margin-bottom: 25px;
+    transition: transform 0.3s;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Caixa de login */
+.login-box { 
+    width: 320px; 
+    padding: 30px 25px;
+    background: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.login-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Título */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #111;
+    font-weight: 600;
+}
+
+/* Campos do formulário */
+input { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: block;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 8px rgba(0,123,255,0.3);
+    outline: none;
+}
+
+/* Botão */
+button { 
+    width: 100%; 
+    padding: 12px; 
+    background: #000000; 
+    color: #fff; 
+    border: none; 
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+    background: #000000;
+    transform: translateY(-2px);
+}
+
+/* Mensagem de erro */
+.erro { 
+    color: red; 
+    font-size: 14px; 
+    margin-bottom: 12px; 
+    text-align: center; 
+}
