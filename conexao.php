@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$dbname = "etimpwiiAluno";  // atenção ao nome certo
+$dbname = "etimpwiiAluno"; 
 $user = "root";
-$pass = "";  // senha vazia no XAMPP por padrão
+$pass = ""; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
