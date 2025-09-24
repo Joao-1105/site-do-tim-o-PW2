@@ -1,17 +1,19 @@
 <?php
 
 require 'Aluno.class.php';
+
 $aluno = new Aluno();
+$aluno->conectar();
 
-$con = $aluno->conectar();
+if(isset($_POST['submit'])){
+    $aluno->setRm($_POST['rm']);
+    $aluno->setNome($_POST['nome']);
+    $aluno->setCpf($_POST['cpf']);
+    $aluno->setEmail($_POST['email']);
 
-if( $con ){
-    $al = $aluno->consulta("kiky@gmail.com");
-    if( !$al ){
-        $aluno->cadastrar(4368, "Quiteria", "kiky@gmail.com", "000.111.222-33");
-    }else{
-        echo"<script>alert('Esse aluno ja esta cadastrado!!')</script>";
-    } 
-}else{
-    echo"<script>alert('Sem conexao com o banco. Tente mais tarde!')</script>";
+    if($aluno->cadastrar()){
+        echo "Cadastro realizado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar.";
+    }
 }
