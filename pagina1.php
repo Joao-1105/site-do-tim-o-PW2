@@ -2,6 +2,7 @@
 session_start();
 
 //criacao de uma sessao 
-$_SESSION['nome'] = "Fabio Claret";
+$_SESSION['nome'] = "Joao Vivtor";
 
 header("location:pagina2.php");
+
